@@ -6,6 +6,8 @@
  :root{
     --primary-color: #891cdcc4;
     --secondary-color: #5b2f6a;
+    --black-color: #000000;
+    --DarkOrchid: #640095;
  }
  a{
     text-decoration: none;
@@ -104,4 +106,10 @@
    transform: translate(-50%, -50%);
    height: 75vh;
    width: 46vw;
+   color: #640095;
  }
+
+ .active {
+   border-bottom: 3px solid var(--black-color); /* Linha sublinhada */
+   color: var(); /* Cor do texto */
+}

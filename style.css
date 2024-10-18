@@ -4,9 +4,11 @@
     box-sizing: border-box;
  }
  :root{
-    --primary-color: #F5CF06;
+    --primary-color: hsl(50, 95%, 49%);
     --secondary-color: #8E4106;
- }a{
+    --black-color: #000000;
+ }
+ a{
     text-decoration: none;
     color: inherit;
  }
@@ -32,6 +34,7 @@
     z-index: 1;
     display: flex;
     justify-content: space-between;
+    unicode-bidi: isolate;
  }
  
  
@@ -103,3 +106,64 @@
     transform: translate(-50%, -50%);
     height: 75vh;
  }
+
+ .active {
+   border-bottom: 3px solid var(--black-color); /* Linha sublinhada */
+   color: var(--secondary-color); 
+   
+}
+
+/*TABLET*/
+@media (max-width: 960px){
+   body{
+      padding-inline: 32px;
+      padding-bottom: 32px;
+
+   }
+   main{
+      justify-content: space-between;
+   }
+   .container{
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+      text-align: center;
+   }
+   .container p{
+      width: 80%;
+   }
+   .container div{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+   }
+   footer{
+      display: none;
+   }
+   .Pikachu-image{
+      height: 55vh;
+   }
+
+}
+
+@media (max-width: 640px){
+   header div{
+      display: none;
+   }
+   .container div{
+      width: 100%;
+   }
+   .container p {
+      display: none;
+   }
+  
+   .container h2{
+      font-size: 36px;
+   }
+   .title span{
+      left: 50%;
+      transform: translateX(-50%);
+   }
+}
